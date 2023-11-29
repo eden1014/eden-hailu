@@ -111,6 +111,7 @@ section{
 }
 .about .about-content,
 .services .serv-content,
+.projects .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -334,7 +335,8 @@ section .title::after{
     font-weight: 600;
     margin-bottom: 10px;
     color: rgb(10, 10, 10);
-    margin-top: 60px;
+    margin-top: 20px;
+
 }
 .about .about-content .right .text span{
     color: #a39090;
@@ -386,10 +388,23 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.services .serv-content .pcard{
+    width: 50%;
+    height: 400px;
+    background: whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 .services .serv-content .card:hover{
     background: #E9E1E1;
 }
 .services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .pcard .box{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover .box{
@@ -400,10 +415,74 @@ section .title::after{
     color: #E9E1E1;
     transition: color 0.3s ease;
 }
+.services .serv-content .pcard i{
+    font-size: 50px;
+    color: #E9E1E1;
+    transition: color 0.3s ease;
+}
 .services .serv-content .card:hover i{
     color: rgb(46, 46, 46);
 }
 .services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.services .serv-content .pcard:hover i{
+    color: rgb(46, 46, 46);
+}
+.services .serv-content .pcard .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.services .serv-content .pcard .card-img-top{
+    width: 100%;
+}
+/* services section styling */
+.projects, .teams{
+    color:rgb(8, 8, 8);
+    background: whitesmoke;
+}
+.projects .title::before,
+.teams .title::before{
+    background: whitesmoke;
+}
+.projects .title::after{
+     content: "what i do";
+}
+.cir3{
+    margin-left: -260px;
+    margin-top: -250px;
+}
+
+.projects .serv-content .card{
+    width: calc(33% - 20px);
+    background: whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 40px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.projects .serv-content .card:hover{
+    background: #E9E1E1;
+}
+.projects .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.projects .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.projects .serv-content .card i{
+    font-size: 50px;
+    color: #E9E1E1;
+    transition: color 0.3s ease;
+}
+.projects .serv-content .card:hover i{
+    color: rgb(46, 46, 46);
+}
+.projects .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -496,7 +575,7 @@ section .title::after{
 
 /* contact section styling */
 .contact{
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
 }
 .contact .title{
     color: rgb(15, 15, 15);
@@ -603,10 +682,12 @@ footer{
     padding: 15px 23px;
     color: rgb(82, 80, 80);
     text-align: center;
+
 }
-footer span a{
+footer  a{
     color: #111010;
     text-decoration: none;
+    
 }
 footer span a:hover{
     text-decoration: underline;
